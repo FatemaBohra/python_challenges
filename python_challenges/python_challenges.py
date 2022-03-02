@@ -161,3 +161,29 @@ print(rm_duplicates_sorting())
 word = sorted(set(input().split()))
 print(' '.join(word))
 print(word)
+
+# 11 Write a program which accepts a sequence of comma separated 4 digit binary numbers as its input and then check whether they are divisible by 5 or not. The numbers that are divisible by 5 are to be printed in a comma separated sequence.
+# Example: 0100,0011,1010,1001
+# Then the output should be: 1010
+
+data = input().split(',')
+data = [num for num in data if int(num, 2) % 5 == 0]
+print(','.join(data))
+#  or
+data = input().split(',')
+lst = []
+for num in data:
+    if int(num, base=2) % 5 == 0:
+        lst.append(num)
+print(','.join(lst))
+
+# 12 Write a program, which will find all such numbers between 1000 and 3000 (both included) such that each digit of the number is an even number.
+# The numbers obtained should be printed in a comma-separated sequence on a single line.
+
+even_nums = []
+for i in range(1000, 3001):  # i = 1000
+    s = str(i)  # s = '1000'
+    # s[0] = '1' -> int('1') -> 1 % 2, s[1] = '0' -> int('0') -> 0 % 2
+    if (int(s[0]) % 2 == 0) and (int(s[1]) % 2 == 0) and (int(s[2]) % 2 == 0) and (int(s[3]) % 2 == 0):
+        even_nums.append(s)
+print(','.join(even_nums))
