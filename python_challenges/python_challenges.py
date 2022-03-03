@@ -222,3 +222,24 @@ for l in sentence:
         pass
 print("UPPER: ", upper)
 print("LOWER: ", lower)
+
+# 15 Write a program that computes the value of a+aa+aaa+aaaa with a given digit as the value of a.
+# Suppose the following input is supplied to the program: 9
+# Then, the output should be: 11106
+
+a = input()  # a = '4'
+# (int(2*'4')) -> int('44') -> 44
+total = int(a) + int(2*a) + int(3*a) + int(4*a)
+print(total)
+
+# 16 Use a list comprehension to square each odd number in a list. The list is input by a sequence of comma-separated numbers.
+# Suppose the following input is supplied to the program: 1,2,3,4,5,6,7,8,9
+# Then, the output should be: 1,9,25,49,81
+
+lst = input().split(',')
+my_lst = []
+for num in lst:
+    if int(num) % 2 != 0:
+        square_each = str(int(num)**2)
+        my_lst.append(square_each)
+print(','.join(my_lst))
