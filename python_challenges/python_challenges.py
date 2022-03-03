@@ -205,3 +205,20 @@ for l in sentence:
         pass
 print("LETTERS: ", letters)
 print("DIGITS: ", digits)
+
+# 14 Write a program that accepts a sentence and calculate the number of upper case letters and lower case letters.
+# Suppose the following input is supplied to the program: Hello world!
+# Then, the output should be: UPPER CASE 1 LOWER CASE 9
+
+sentence = input("Enter the sentence: ")
+upper, lower = 0, 0
+
+for l in sentence:
+    if l.isupper():
+        upper += 1
+    elif l.islower():
+        lower += 1
+    else:
+        pass
+print("UPPER: ", upper)
+print("LOWER: ", lower)
