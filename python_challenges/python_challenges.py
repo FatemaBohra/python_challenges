@@ -243,3 +243,18 @@ for num in lst:
         square_each = str(int(num)**2)
         my_lst.append(square_each)
 print(','.join(my_lst))
+
+# 17 Write a program that computes the net amount of a bank account based a transaction log from console input.
+# Suppose the following input is supplied to the program: D 300, D 300, W 200, D 100
+# Then, the output should be: 500
+
+amount = 0
+while True:
+    transaction = input().split(' ')
+    if transaction[0] == 'D':
+        amount = amount + int(transaction[1])
+    elif transaction[0] == 'W':
+        amount = amount - int(transaction[1])
+    elif input() == '':
+        break
+    print(f'Your current balance is: {amount}')
