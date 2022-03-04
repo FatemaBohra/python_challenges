@@ -394,3 +394,29 @@ while True:
 # euclidean distance = square root of (x^2+y^2) and rounding it to nearest integer
 distance = round(math.sqrt(x**2 + y**2))
 print(distance)
+
+# 22 Write a program to compute the frequency of the words from the input. The output should outlet after sorting the key alphanumerically.
+# Suppose the following input is supplied to the program: New to Python or choosing between Python 2 and Python 3? Read Python 2 or Python 3.
+# Then, the output should be: 2:2 3.:1 3?:1 New:1 Python:5 Read:1 and:1 between:1 choosing:1 or:2 to:1
+
+words = input().split()
+words.sort()
+
+for i in words:
+    count = words.count(i)
+    pprint({i: count})
+# or
+p = input().split()
+pprint({i: p.count(i) for i in p})
+
+# 23 Write a method which can calculate square value of number
+# Using the ** operator which can be written as n**p where means n^p
+
+
+def cal_square_val(number):
+    square = number**2
+    return square
+
+
+print(cal_square_val(2))
+print(cal_square_val(7))
