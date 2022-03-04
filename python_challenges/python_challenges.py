@@ -437,3 +437,23 @@ def power(num, pow):
 
 print(power(3, 4))
 print(pow.__doc__)
+
+# 25 Define a class, which have a class parameter and have a same instance parameter.
+
+
+class Animal():
+    name = 'Animal'
+
+    def __init__(self, name=None):
+        self.name = name
+
+
+cat = Animal('Cat')
+print(Animal.name, cat.name)
+
+goat = Animal('Goat')
+print(Animal.name, goat.name)
+# or
+cow = Animal()
+cow.name = 'Cow'
+print(Animal.name, cow.name)
