@@ -2,6 +2,7 @@
 # between 2000 and 3200 (both included).
 # The numbers obtained should be printed in a comma-separated sequence on a single line.
 
+from pprint import pprint
 import math
 
 
@@ -118,8 +119,14 @@ print(two_dimensional_array())
 
 words = input().split(',')
 words.sort()
-print(', '.join(words))  # simple output
-print(words)  # gives list as output
+
+
+def sort_remove_dup():
+    return(', '.join(words))
+
+
+print(sort_remove_dup())
+
 
 # 9 Write a program that accepts sequence of lines as input and prints the lines after making all characters in the sentence capitalized.
 # Suppose the following input is supplied to the program:
@@ -197,14 +204,26 @@ sentence = input("Enter sentence: ")
 letters, digits = 0, 0
 
 for l in sentence:
-    if l.isalpha():
+    if l.isalpha:
         letters = letters + 1
-    elif l.isdigit():
+    elif l.isdigit:
         digits = digits + 1
     else:
         pass
-print("LETTERS: ", letters)
-print("DIGITS: ", digits)
+print(f'LETTERS {letters}')
+print(f'DIGITS {digits}')
+# or
+s = input()
+d = {"DIGITS": 0, "LETTERS": 0}
+for c in s:
+    if c.isdigit():
+        d["DIGITS"] += 1
+    elif c.isalpha():
+        d["LETTERS"] += 1
+    else:
+        pass
+print("LETTERS", d["LETTERS"])
+print("DIGITS", d["DIGITS"])
 
 # 14 Write a program that accepts a sentence and calculate the number of upper case letters and lower case letters.
 # Suppose the following input is supplied to the program: Hello world!
@@ -258,3 +277,79 @@ while True:
     elif input() == '':
         break
     print(f'Your current balance is: {amount}')
+
+# 18 A website requires the users to input username and password to register. Write a program to check the validity of password input by users.
+# Following are the criteria for checking the password:
+# At least 1 letter between [a-z]
+# At least 1 number between [0-9]
+# At least 1 letter between [A-Z]
+# At least 1 character from [$#@]
+# Minimum length of transaction password: 6
+# Maximum length of transaction password: 12
+# Your program should accept a sequence of comma separated passwords and will check them according to the above criteria. Passwords that match the criteria are to be printed, each separated by a comma.
+# Example If the following passwords are given as input to the program: ABd1234@1,a F1#,2w3E*,2We3345
+# Then, the output of the program should be: ABd1234@1
+
+
+def is_low(x):                  # Returns True  if the string has a lowercase
+
+    for char in x:
+        if 'a' <= char and char <= 'z':
+            return True
+    return False
+
+
+def is_up(x):                   # Returns True  if the string has a uppercase
+    for char in x:
+        if 'A' <= char and char <= 'Z':
+            return True
+    return False
+
+
+def is_num(x):                  # Returns True  if the string has a numeric digit
+    for char in x:
+        if '0' <= char and char <= '9':
+            return True
+    return False
+
+
+def is_other(x):                # Returns True if the string has any "$#@"
+    for char in x:
+        if char == '$' or char == '#' or char == '@':
+            return True
+    return False
+
+
+passwords = input().split(',')
+lst = []
+
+for word in passwords:
+    length = len(word)
+    # Checks if all the requirments are fulfilled
+    if 6 <= length and length <= 12 and is_low(word) and is_up(word) and is_num(word) and is_other(word):
+        lst.append(word)
+
+print(",".join(lst))
+
+# 19 You are required to write a program to sort the (name, age, score) tuples by ascending order where name is string, age and score are numbers. The tuples are input by console. The sort criteria is:
+# 1: Sort based on name
+# 2: Then sort based on age
+# 3: Then sort by score
+# If the following tuples are given as input to the program:
+# Tom,19,80
+# John,20,90
+# Jony,17,91
+# Jony,17,93
+# Json,21,85
+# Then, the output of the program should be: [('John', '20', '90'), ('Jony', '17', '91'), ('Jony', '17', '93'), ('Json', '21', '85'), ('Tom', '19', '80')]
+
+lst = []
+while True:
+    s = input().split(',')
+    if not s[0]:                          # breaks for blank input
+        break
+    lst.append(tuple(s))
+
+# here key is defined by lambda and the data is sorted by element priority 0>1>2 in accending order
+lst.sort(key=lambda x: (x[0], int(x[1]), int(x[2])))
+print(lst)
