@@ -484,3 +484,41 @@ def convert_int_to_str(number):
 
 
 print(convert_int_to_str(3))
+
+# 28 Define a function that can receive two integer numbers in string form and compute their sum and then print it in console.
+
+
+def str_to_int_and_its_sum(str1, str2):
+    sum = int(str1) + int(str2)
+    return sum
+
+
+print(str_to_int_and_its_sum('10', '7'))
+
+# 29 Define a function that can accept two strings as input and concatenate them and then print it in console.
+
+
+def concatenate_strings(str1, str2):
+    concatenate = str1 + str2
+    return concatenate
+
+
+print(concatenate_strings('Love ', 'Yourself'))  # Love Yourself
+print(concatenate_strings('12', '3'))  # 123
+
+# 30 Define a function that can accept two strings as input and print the string with maximum length in console.
+# If two strings have the same length, then the function should print all strings line by line.
+
+
+def maximum_len(str1, str2):
+    if len(str1) == len(str2):
+        return str1, str2
+    elif len(str1) > len(str2):
+        return str1
+    else:
+        return str2
+
+
+print(maximum_len('Hello', 'There'))
+print(maximum_len('Take', 'it'))
+print(maximum_len('We', 'Win'))
