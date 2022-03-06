@@ -522,3 +522,72 @@ def maximum_len(str1, str2):
 print(maximum_len('Hello', 'There'))
 print(maximum_len('Take', 'it'))
 print(maximum_len('We', 'Win'))
+
+# 31 Define a function which can print a dictionary where the keys are numbers between 1 and 20 (both included)
+# and the values are square of keys.
+
+
+def print_dict():
+    dictionary = {}
+
+    for i in range(1, 21):
+        dictionary[i] = i**2
+    return dictionary
+
+
+print(print_dict())
+
+# 32 Define a function which can generate a dictionary where the keys are numbers between 1 and 20 (both included)
+# and the values are square of keys. The function should just print the keys only.
+
+
+def print_keys():
+    dictionary = {}
+
+    for i in range(1, 21):
+        dictionary[i] = i**2
+    return dictionary.keys()
+
+
+print(print_keys())
+
+# 33 Define a function which can generate and print a list where the values are square of numbers between 1 and 20 (both included).
+
+
+def print_list():
+    values = []
+    for i in range(1, 21):
+        square_of_numbers = i**2
+        values.append(square_of_numbers)
+    return values
+
+
+print(print_list())
+
+# 34 Define a function which can generate a list where the values are square of numbers between 1 and 20 (both included).
+# Then the function needs to print the first 5 elements in the list.
+
+
+def first_5_elements():
+    values = []
+    for i in range(1, 21):
+        square_of_num = i**2
+        values.append(square_of_num)
+    return values[:5]
+
+
+print(first_5_elements())
+
+# 35 Define a function which can generate a list where the values are square of numbers between 1 and 20 (both included).
+# Then the function needs to print the last 5 elements in the list.
+
+
+def first_5_elements():
+    values = []
+    for i in range(1, 21):
+        square_of_num = i**2
+        values.append(square_of_num)
+    return values[-5:]
+
+
+print(first_5_elements())
