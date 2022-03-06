@@ -474,3 +474,13 @@ def sum_of_two_num(num1, num2):
 
 
 print(sum_of_two_num(7, 3))
+
+# 27 Define a function that can convert an integer into a string and print it in console.
+
+
+def convert_int_to_str(number):
+    int_to_str = str(number)
+    return (int_to_str)
+
+
+print(convert_int_to_str(3))
