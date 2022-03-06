@@ -591,3 +591,70 @@ def first_5_elements():
 
 
 print(first_5_elements())
+
+# 36 Define a function which can generate a list where the values are square of numbers between 1 and 20 (both included).
+# Then the function needs to print all values except the first 5 elements in the list.
+
+
+def first_5_elements():
+    values = []
+    for i in range(1, 21):
+        square_of_num = i**2
+        values.append(square_of_num)
+    return values[5:]
+
+
+print(first_5_elements())
+
+# 37 Define a function which can generate and print a tuple where the value are square of numbers between 1 and 20 (both included).
+
+
+def print_tuple():
+    values = []
+    for i in range(1, 21):
+        square_of_nums = i**2
+        values.append(square_of_nums)
+    return tuple(values)
+
+
+print(print_tuple())
+
+# 38 With a given tuple (1,2,3,4,5,6,7,8,9,10),
+# write a program to print the first half values in one line and the last half values in one line.
+
+
+def first_half_last_half():
+    tup = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    first_half = tup[:5]
+    last_half = tup[5:]
+    return first_half, last_half
+
+
+print(first_half_last_half())
+
+# 39 Write a program to generate and print another tuple whose values are even numbers in the given tuple (1,2,3,4,5,6,7,8,9,10).
+
+
+def even_val_tuple():
+    values = []
+    tup = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    for i in tup:
+        if i % 2 == 0:
+            values.append(i)
+    return tuple(values)
+
+
+print(even_val_tuple())
+
+# 40 Write a program which accepts a string as input to print "Yes" if the string is "yes" or "YES" or "Yes", otherwise print "No".
+
+
+def print_Yes():
+    str = input("Enter string: ")  # string as input
+    if str == 'Yes' or str == 'yes' or str == 'YES':
+        return 'Yes'
+    else:
+        return 'No'
+
+
+print(print_Yes())
