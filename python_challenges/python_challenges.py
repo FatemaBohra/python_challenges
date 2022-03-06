@@ -8,6 +8,7 @@ import math
 
 def div_by_7_not_5():
     li = []
+
     for i in range(2000, 3200 + 1):
         if i % 7 == 0 and i % 5 != 0:
             li.append(i)
@@ -119,14 +120,8 @@ print(two_dimensional_array())
 
 words = input().split(',')
 words.sort()
-
-
-def sort_remove_dup():
-    return(', '.join(words))
-
-
-print(sort_remove_dup())
-
+print(', '.join(words))  # simple output
+print(words)  # gives list as output
 
 # 9 Write a program that accepts sequence of lines as input and prints the lines after making all characters in the sentence capitalized.
 # Suppose the following input is supplied to the program:
@@ -202,7 +197,6 @@ print(",".join(even_nums))
 
 sentence = input("Enter sentence: ")
 letters, digits = 0, 0
-
 for l in sentence:
     if l.isalpha:
         letters = letters + 1
@@ -401,10 +395,11 @@ print(distance)
 
 words = input().split()
 words.sort()
+dictionary = {}
 
-for i in words:
-    count = words.count(i)
-    pprint({i: count})
+for char in words:
+    dictionary[char] = words.count(char)
+print(dictionary)
 # or
 p = input().split()
 pprint({i: p.count(i) for i in p})
@@ -457,3 +452,292 @@ print(Animal.name, goat.name)
 cow = Animal()
 cow.name = 'Cow'
 print(Animal.name, cow.name)
+
+# 26 Define a function which can compute the sum of two numbers.
+# Define a function with two numbers as arguments. You can compute the sum in the function and return the value.
+
+
+def sum_of_two_num():
+    number1 = int(input("Enter first numbers: "))
+    number2 = int(input("Enter second numbers: "))
+    return number1 + number2
+
+
+print(sum_of_two_num())
+
+# or
+
+
+def sum_of_two_num(num1, num2):
+    return num1 + num2
+
+
+print(sum_of_two_num(7, 3))
+
+# 27 Define a function that can convert an integer into a string and print it in console.
+
+
+def convert_int_to_str(number):
+    int_to_str = str(number)
+    return (int_to_str)
+
+
+print(convert_int_to_str(3))
+
+# 28 Define a function that can receive two integer numbers in string form and compute their sum and then print it in console.
+
+
+def str_to_int_and_its_sum(str1, str2):
+    sum = int(str1) + int(str2)
+    return sum
+
+
+print(str_to_int_and_its_sum('10', '7'))
+
+# 29 Define a function that can accept two strings as input and concatenate them and then print it in console.
+
+
+def concatenate_strings(str1, str2):
+    concatenate = str1 + str2
+    return concatenate
+
+
+print(concatenate_strings('Love ', 'Yourself'))  # Love Yourself
+print(concatenate_strings('12', '3'))  # 123
+
+# 30 Define a function that can accept two strings as input and print the string with maximum length in console.
+# If two strings have the same length, then the function should print all strings line by line.
+
+
+def maximum_len(str1, str2):
+    if len(str1) == len(str2):
+        return str1, str2
+    elif len(str1) > len(str2):
+        return str1
+    else:
+        return str2
+
+
+print(maximum_len('Hello', 'There'))
+print(maximum_len('Take', 'it'))
+print(maximum_len('We', 'Win'))
+
+# 31 Define a function which can print a dictionary where the keys are numbers between 1 and 20 (both included)
+# and the values are square of keys.
+
+
+def print_dict():
+    dictionary = {}
+
+    for i in range(1, 21):
+        dictionary[i] = i**2
+    return dictionary
+
+
+print(print_dict())
+
+# 32 Define a function which can generate a dictionary where the keys are numbers between 1 and 20 (both included)
+# and the values are square of keys. The function should just print the keys only.
+
+
+def print_keys():
+    dictionary = {}
+
+    for i in range(1, 21):
+        dictionary[i] = i**2
+    return dictionary.keys()
+
+
+print(print_keys())
+
+# 33 Define a function which can generate and print a list where the values are square of numbers between 1 and 20 (both included).
+
+
+def print_list():
+    values = []
+    for i in range(1, 21):
+        square_of_numbers = i**2
+        values.append(square_of_numbers)
+    return values
+
+
+print(print_list())
+
+# 34 Define a function which can generate a list where the values are square of numbers between 1 and 20 (both included).
+# Then the function needs to print the first 5 elements in the list.
+
+
+def first_5_elements():
+    values = []
+    for i in range(1, 21):
+        square_of_num = i**2
+        values.append(square_of_num)
+    return values[:5]
+
+
+print(first_5_elements())
+
+# 35 Define a function which can generate a list where the values are square of numbers between 1 and 20 (both included).
+# Then the function needs to print the last 5 elements in the list.
+
+
+def first_5_elements():
+    values = []
+    for i in range(1, 21):
+        square_of_num = i**2
+        values.append(square_of_num)
+    return values[-5:]
+
+
+print(first_5_elements())
+
+# 36 Define a function which can generate a list where the values are square of numbers between 1 and 20 (both included).
+# Then the function needs to print all values except the first 5 elements in the list.
+
+
+def first_5_elements():
+    values = []
+    for i in range(1, 21):
+        square_of_num = i**2
+        values.append(square_of_num)
+    return values[5:]
+
+
+print(first_5_elements())
+
+# 37 Define a function which can generate and print a tuple where the value are square of numbers between 1 and 20 (both included).
+
+
+def print_tuple():
+    values = []
+    for i in range(1, 21):
+        square_of_nums = i**2
+        values.append(square_of_nums)
+    return tuple(values)
+
+
+print(print_tuple())
+
+# 38 With a given tuple (1,2,3,4,5,6,7,8,9,10),
+# write a program to print the first half values in one line and the last half values in one line.
+
+
+def first_half_last_half():
+    tup = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    first_half = tup[:5]
+    last_half = tup[5:]
+    return first_half, last_half
+
+
+print(first_half_last_half())
+
+# 39 Write a program to generate and print another tuple whose values are even numbers in the given tuple (1,2,3,4,5,6,7,8,9,10).
+
+
+def even_val_tuple():
+    values = []
+    tup = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    for i in tup:
+        if i % 2 == 0:
+            values.append(i)
+    return tuple(values)
+
+
+print(even_val_tuple())
+
+# 40 Write a program which accepts a string as input to print "Yes" if the string is "yes" or "YES" or "Yes", otherwise print "No".
+
+
+def print_Yes():
+    str = input("Enter string: ")  # string as input
+    if str == 'Yes' or str == 'yes' or str == 'YES':
+        return 'Yes'
+    else:
+        return 'No'
+
+
+print(print_Yes())
+
+# 41 Write a program which can map() to make a list whose elements are square of elements in [1,2,3,4,5,6,7,8,9,10].
+
+li = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+squaredNumbers = map(lambda x: x**2, li)  # returns map type object data
+print(list(squaredNumbers))           # converting the object into list
+
+# 42 Write a program which can map() and filter() to make a list whose elements are square of even number in [1,2,3,4,5,6,7,8,9,10].
+
+
+def sq_of_evenNum():
+    lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    evenNumbers = map(lambda x: x**2, filter(lambda x: x % 2 == 0, lst))
+    return list(evenNumbers)
+
+
+print(sq_of_evenNum())
+# or
+
+
+def even(x):
+    return x % 2 == 0
+
+
+def squer(x):
+    return x**2
+
+
+li = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# first filters number by even number and the apply map() on the resultant elements
+li = map(squer, filter(even, li))
+print(list(li))
+
+# 43 Write a program which can filter() to make a list whose elements are even number between 1 and 20 (both included).
+
+
+def evenNum(i):
+    return i % 2 == 0
+
+
+print(list(filter(evenNum, range(1, 21))))
+
+# 44 Write a program which can map() to make a list whose elements are square of numbers between 1 and 20 (both included).
+
+
+def sq_num(i):
+    return i**2
+
+
+print(list(map(sq_num, range(1, 21))))
+
+# 45 Define a class named American which has a static method called printNationality.
+
+
+class American():
+    @staticmethod
+    def printNationality():
+        print('I am American')
+
+
+anAmerican = American()
+# this will not run if @staticmethod does not decorates the function.
+anAmerican.printNationality()
+# Because the class has no instance.
+
+American.printNationality()    # this will run even though the @staticmethod
+# does not decorate printNationality()
+
+# 46 Define a class named American and its subclass NewYorker.
+
+
+class American():
+    pass
+
+
+class NewYorker(American):
+    pass
+
+
+american = American()
+newYorker = NewYorker()
+
+print(american)
+print(newYorker)
