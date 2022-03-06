@@ -658,3 +658,70 @@ def print_Yes():
 
 
 print(print_Yes())
+
+# 41 Write a program which can map() to make a list whose elements are square of elements in [1,2,3,4,5,6,7,8,9,10].
+
+li = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+squaredNumbers = map(lambda x: x**2, li)  # returns map type object data
+print(list(squaredNumbers))           # converting the object into list
+
+# 42 Write a program which can map() and filter() to make a list whose elements are square of even number in [1,2,3,4,5,6,7,8,9,10].
+
+
+def sq_of_evenNum():
+    lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    evenNumbers = map(lambda x: x**2, filter(lambda x: x % 2 == 0, lst))
+    return list(evenNumbers)
+
+
+print(sq_of_evenNum())
+# or
+
+
+def even(x):
+    return x % 2 == 0
+
+
+def squer(x):
+    return x**2
+
+
+li = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# first filters number by even number and the apply map() on the resultant elements
+li = map(squer, filter(even, li))
+print(list(li))
+
+# 43 Write a program which can filter() to make a list whose elements are even number between 1 and 20 (both included).
+
+
+def evenNum(i):
+    return i % 2 == 0
+
+
+print(list(filter(evenNum, range(1, 21))))
+
+# 44 Write a program which can map() to make a list whose elements are square of numbers between 1 and 20 (both included).
+
+
+def sq_num(i):
+    return i**2
+
+
+print(list(map(sq_num, range(1, 21))))
+
+# 45 Define a class named American which has a static method called printNationality.
+
+
+class American():
+    @staticmethod
+    def printNationality():
+        print('I am American')
+
+
+anAmerican = American()
+# this will not run if @staticmethod does not decorates the function.
+anAmerican.printNationality()
+# Because the class has no instance.
+
+American.printNationality()    # this will run even though the @staticmethod
+# does not decorate printNationality()
