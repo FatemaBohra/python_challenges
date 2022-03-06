@@ -725,3 +725,20 @@ anAmerican.printNationality()
 
 American.printNationality()    # this will run even though the @staticmethod
 # does not decorate printNationality()
+
+# 46 Define a class named American and its subclass NewYorker.
+
+
+class American():
+    pass
+
+
+class NewYorker(American):
+    pass
+
+
+american = American()
+newYorker = NewYorker()
+
+print(american)
+print(newYorker)
