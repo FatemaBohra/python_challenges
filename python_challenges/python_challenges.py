@@ -813,3 +813,22 @@ try:
     division()
 except ZeroDivisionError:
     print("Why on earth you are dividing a number by ZEROOO!")
+
+# 52 Define a custom exception class which takes a string message as attribute.
+
+
+class CustomException(Exception):
+    def __init__(self, message):
+        self.message = message
+
+
+customException = CustomException('Something went wrong')
+print(customException)
+
+# 53 Assuming that we have some email addresses in the "username@companyname.com" format, please write program to print the user name of a given email address. Both user names and company names are composed of letters only.
+# Example: If the following email address is given as input to the program:john@google.com
+# Then, the output of the program should be: john
+
+email = input("Enter your email: ")
+username_of_email = email.split('@')
+print(username_of_email[0])
