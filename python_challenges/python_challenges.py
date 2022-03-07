@@ -8,7 +8,6 @@ import math
 
 def div_by_7_not_5():
     li = []
-
     for i in range(2000, 3200 + 1):
         if i % 7 == 0 and i % 5 != 0:
             li.append(i)
@@ -197,7 +196,6 @@ print(",".join(even_nums))
 
 sentence = input("Enter sentence: ")
 letters, digits = 0, 0
-
 for l in sentence:
     if l.isalpha:
         letters = letters + 1
@@ -742,3 +740,18 @@ newYorker = NewYorker()
 
 print(american)
 print(newYorker)
+
+# 47 Define a class named Circle which can be constructed by a radius.
+# The Circle class has a method which can compute the area.
+
+
+class Circle():
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area_of_cir(self):
+        return ((self.radius**2) * (3.14))  # r^2(pi)
+
+
+circle = Circle(3)
+print(circle.area_of_cir())
