@@ -800,4 +800,16 @@ print(Square().area())
 
 # 50 Please raise a RuntimeError exception.
 
-raise RuntimeError('Something went wrong.')
+'''raise RuntimeError('Something went wrong.')'''
+
+# 51 Write a function to compute 5/0 and use try/except to catch the exceptions.
+
+
+def division():
+    return 5/0
+
+
+try:
+    division()
+except ZeroDivisionError:
+    print("Why on earth you are dividing a number by ZEROOO!")
