@@ -771,3 +771,33 @@ class Rectangle():
 
 rectangle = Rectangle(4, 2)
 print(rectangle.area_of_rec())
+
+# 49 Define a class named Shape and its subclass Square.
+# The Square class has an init function which takes a length as argument.
+# Both classes have a area function which can print the area of the shape where Shape's area is 0 by default.
+
+
+class Shape():
+    def __init__(self):
+        pass
+
+    def area(self, length=0):
+        return length
+
+
+class Square(Shape):
+    def __init__(self, length=0):
+        Shape.__init__(self)
+        self.length = length
+
+    def area(self, length=0):
+        return self.length * self.length
+
+
+square = Square(5)
+print(square.area())
+print(Square().area())
+
+# 50 Please raise a RuntimeError exception.
+
+raise RuntimeError('Something went wrong.')
