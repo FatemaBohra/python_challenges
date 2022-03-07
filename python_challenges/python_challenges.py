@@ -755,3 +755,19 @@ class Circle():
 
 circle = Circle(3)
 print(circle.area_of_cir())
+
+# 48 Define a class named Rectangle which can be constructed by a length and width.
+# The Rectangle class has a method which can compute the area.
+
+
+class Rectangle():
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+    def area_of_rec(self):
+        return self.length * self.width
+
+
+rectangle = Rectangle(4, 2)
+print(rectangle.area_of_rec())
