@@ -859,3 +859,8 @@ def find_digits():
 
 
 print(find_digits())
+
+# 56 Print a unicode string "hello world".
+
+unicodeString = u"hello world"
+print(unicodeString)
