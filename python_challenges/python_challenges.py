@@ -864,3 +864,9 @@ print(find_digits())
 
 unicodeString = u"hello world"
 print(unicodeString)
+
+# 57 Write a program to read an ASCII string and to convert it to a unicode string encoded by utf-8.
+
+string_ASCII = input("enter string")
+encoded = string_ASCII.encode('utf-8')
+print(encoded)
