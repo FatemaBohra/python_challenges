@@ -842,3 +842,20 @@ email = "john@google.com elise@python.com"
 pattern = "\w+@(\w+).com"
 ans = re.findall(pattern, email)
 print(ans)
+
+# 55 Write a program which accepts a sequence of words separated by whitespace as input to print the words composed of digits only.
+# Example: 2 cats and 3 dogs.
+# Then, the output of the program should be:['2', '3']
+
+
+def find_digits():
+    words = input("Enter string").split()
+    digits = []
+
+    for char in words:
+        if char.isdigit():
+            digits.append(char)
+    return digits
+
+
+print(find_digits())
