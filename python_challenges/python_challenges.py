@@ -870,3 +870,7 @@ print(unicodeString)
 string_ASCII = input("enter string")
 encoded = string_ASCII.encode('utf-8')
 print(encoded)
+
+# 58 Write a special comment to indicate a Python source code file is in unicode.
+
+# -*- coding: 'utf-8' -*-
