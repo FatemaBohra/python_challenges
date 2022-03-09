@@ -2,6 +2,7 @@
 # between 2000 and 3200 (both included).
 # The numbers obtained should be printed in a comma-separated sequence on a single line.
 
+import re
 from pprint import pprint
 import math
 
@@ -832,3 +833,12 @@ print(customException)
 email = input("Enter your email: ")
 username_of_email = email.split('@')
 print(username_of_email[0])
+
+# 54 Assuming that we have some email addresses in the "username@companyname.com" format, please write program to print the company name of a given email address. Both user names and company names are composed of letters only.
+# Example: john@google.com
+# Then, the output of the program should be: google
+
+email = "john@google.com elise@python.com"
+pattern = "\w+@(\w+).com"
+ans = re.findall(pattern, email)
+print(ans)
