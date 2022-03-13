@@ -1016,3 +1016,15 @@ def binary_search(lst, item):
 
 lst = [1, 3, 5, 7, 9, 13]
 print(binary_search(lst, 9))
+
+# 68 Please generate a random float where the value is between 10 and 100 using Python module.
+# Hint: Use random.random() to generate a random float in [0,1].
+
+random_num = random.uniform(10, 100)
+print(random_num)
+
+# 69 Please generate a random float where the value is between 5 and 95 using Python module.
+# Hint: Use random.random() to generate a random float in [0,1]
+
+random_num = random.uniform(5, 95)
+print(random_num)
