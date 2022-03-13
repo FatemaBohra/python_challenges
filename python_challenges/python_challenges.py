@@ -955,3 +955,20 @@ values = []
 for i in even_value(num):
     values.append(str(i))
 print(','.join(values))
+
+# 64 Please write a program using generator to print the numbers which can be divisible by 5 and 7 between 0 and n in comma separated form while n is input by console.
+# Example: 100
+# Then, the output of the program should be: 0,35,70
+
+
+def div_by_5_7(n):
+    for number in range(0, n + 1):
+        if number % 5 == 0 and number % 7 == 0:
+            yield number
+
+
+num = int(input("Enter num: "))
+values = []
+for i in div_by_5_7(num):
+    values.append(str(i))
+print(','.join(values))
