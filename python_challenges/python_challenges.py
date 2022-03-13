@@ -2,6 +2,7 @@
 # between 2000 and 3200 (both included).
 # The numbers obtained should be printed in a comma-separated sequence on a single line.
 
+import random
 import re
 from pprint import pprint
 import math
@@ -884,3 +885,146 @@ sum = 0
 for i in range(1, n+1):
     sum += i/(i+1)
 print(round(sum, 2))  # rounded to 2 decimal point
+
+# 60 Write a program to compute: f(n)=f(n-1)+100 when n>0 and f(0)=0 with a given n input by console (n>0).
+# Example: 5
+# Then, the output of the program should be:500
+# Hint: We can define recursive function in Python.
+
+
+def f(n):
+    if n == 0:
+        return 0
+    else:
+        return f(n-1) + 100
+
+
+num = int(input("Enter a number: "))
+print(f(num))
+
+# 61 The Fibonacci Sequence is computed based on the following formula:f(n)=0 if n=0 f(n)=1 if n=1 f(n)=f(n-1)+f(n-2) if n>1
+# Please write a program to compute the value of f(n) with a given n input by console.
+# Example: 7
+# Then, the output of the program should be: 13
+
+
+def f(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return f(n-1) + f(n-2)
+
+
+num = int(input("Enter a num: "))
+print(f(num))
+
+# 62 The Fibonacci Sequence is computed based on the following formula: f(n)=0 if n=0, f(n)=1 if n=1, f(n)=f(n-1)+f(n-2) if n>1
+# Please write a program to compute the value of f(n) with a given n input by console.
+# Example: 7
+# Then, the output of the program should be: 0,1,1,2,3,5,8,13
+
+
+def f(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return f(n-1) + f(n-2)
+
+
+num = int(input("Enter a num: "))
+values = (str(f(i)) for i in range(0, num + 1))
+print(','.join(values))
+
+# 63 Please write a program using generator to print the even numbers between 0 and n in comma separated form while n is input by console.
+# Example: 10
+# Then, the output of the program should be: 0,2,4,6,8,10
+
+
+def even_value(n):
+    for number in range(0, n + 1):
+        if number % 2 == 0:
+            yield number
+
+
+num = int(input("Enter num: "))
+values = []
+for i in even_value(num):
+    values.append(str(i))
+print(','.join(values))
+
+# 64 Please write a program using generator to print the numbers which can be divisible by 5 and 7 between 0 and n in comma separated form while n is input by console.
+# Example: 100
+# Then, the output of the program should be: 0,35,70
+
+
+def div_by_5_7(n):
+    for number in range(0, n + 1):
+        if number % 5 == 0 and number % 7 == 0:
+            yield number
+
+
+num = int(input("Enter num: "))
+values = []
+for i in div_by_5_7(num):
+    values.append(str(i))
+print(','.join(values))
+
+# 65 Please write assert statements to verify that every number in the list [2,4,6,8] is even.
+# Hints Use "assert expression" to make assertion.
+
+li = [2, 4, 5, 6, 8]
+for i in li:
+    assert i % 2 == 0
+
+# 66 Please write a program which accepts basic mathematic expression from console and print the evaluation result.
+# Example: 35 + 3
+# Then, the output of the program should be: 38
+# Hint: Use eval() to evaluate an expression.
+
+
+def mathematic_expression():
+    expression = (input("Enter an expression: "))
+    result = eval(expression)
+    return result
+
+
+print(mathematic_expression())
+
+# 67 Please write a binary search function which searches an item in a sorted list. The function should return the index of element to be searched in the list.
+# Hint: Use if/elif to deal with conditions.
+
+
+def binary_search(lst, item):
+    low = 0
+    high = len(lst) - 1
+
+    while low <= high:
+        mid = round((low + high) / 2)
+
+        if lst[mid] == item:
+            return mid
+        elif lst[mid] > item:
+            high = mid - 1
+        else:
+            low = mid + 1
+    return None
+
+
+lst = [1, 3, 5, 7, 9, 13]
+print(binary_search(lst, 9))
+
+# 68 Please generate a random float where the value is between 10 and 100 using Python module.
+# Hint: Use random.random() to generate a random float in [0,1].
+
+random_num = random.uniform(10, 100)
+print(random_num)
+
+# 69 Please generate a random float where the value is between 5 and 95 using Python module.
+# Hint: Use random.random() to generate a random float in [0,1]
+
+random_num = random.uniform(5, 95)
+print(random_num)
