@@ -979,3 +979,17 @@ print(','.join(values))
 li = [2, 4, 5, 6, 8]
 for i in li:
     assert i % 2 == 0
+
+# 66 Please write a program which accepts basic mathematic expression from console and print the evaluation result.
+# Example: 35 + 3
+# Then, the output of the program should be: 38
+# Hint: Use eval() to evaluate an expression.
+
+
+def mathematic_expression():
+    expression = (input("Enter an expression: "))
+    result = eval(expression)
+    return result
+
+
+print(mathematic_expression())
