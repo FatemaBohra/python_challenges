@@ -1049,3 +1049,14 @@ def div_by_5_7():
 
 
 print(div_by_5_7())
+
+# 72 Please write a program to generate a list with 5 random numbers between 100 and 200 inclusive.
+# Hint: Use random.sample() to generate a list of random values.
+
+
+def random_5_val():
+    random_val = random.sample(range(100, 201), 5)
+    return random_val
+
+
+print(random_5_val())
