@@ -2,6 +2,7 @@
 # between 2000 and 3200 (both included).
 # The numbers obtained should be printed in a comma-separated sequence on a single line.
 
+import time
 import zlib
 import random
 import re
@@ -1101,3 +1102,29 @@ s = bytes('hello world!hello world!hello world!hello world!', 'utf-8')
 t = zlib.compress(s)
 print(t)
 print(zlib.decompress(t))
+
+# 77 Please write a program to print the running time of execution of "1+1" for 100 times.
+# Hint: Use timeit() function to measure the running time.
+
+
+def execution_time():
+    before = time.time()
+    for i in range(100):
+        x = 1 + 1
+    after = time.time()
+    execution_time = after - before
+    return(execution_time)
+
+
+print(execution_time())
+
+# 78 Please write a program to shuffle and print the list [3,6,7,8].
+
+
+def shuffle():
+    lst = [3, 6, 7, 8]
+    shuffle = random.shuffle(lst)
+    return lst
+
+
+print(shuffle())
