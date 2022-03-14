@@ -1060,3 +1060,23 @@ def random_5_val():
 
 
 print(random_5_val())
+
+# 73 Please write a program to randomly generate a list with 5 even numbers between 100 and 200 inclusive.
+
+
+def even_5_num():
+    random_val = random.sample([i for i in range(100, 201) if i % 2 == 0], 5)
+    return random_val
+
+
+print(even_5_num())
+
+# 74 Please write a program to randomly generate a list with 5 numbers, which are divisible by 5 and 7 , between 1 and 1000 inclusive.
+
+
+def div_by_5_7():
+    random_val = random.sample([i for i in range(1, 1001) if i % 35 == 0], 5)
+    return random_val
+
+
+print(div_by_5_7())
