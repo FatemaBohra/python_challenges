@@ -2,6 +2,7 @@
 # between 2000 and 3200 (both included).
 # The numbers obtained should be printed in a comma-separated sequence on a single line.
 
+import zlib
 import random
 import re
 from pprint import pprint
@@ -1080,3 +1081,22 @@ def div_by_5_7():
 
 
 print(div_by_5_7())
+
+# 75 Please write a program to randomly print a integer number between 7 and 15 inclusive.
+# Hint: Use random.randrange() to a random integer in a given range.
+
+
+def randomly_print_integer():
+    random_int = random.randrange(7, 16)
+    return random_int
+
+
+print(randomly_print_integer())
+
+# 76 Please write a program to compress and decompress the string "hello world!hello world!hello world!hello world!".
+# Hint: Use zlib.compress() and zlib.decompress() to compress and decompress a string.
+
+s = bytes('hello world!hello world!hello world!hello world!', 'utf-8')
+t = zlib.compress(s)
+print(t)
+print(zlib.decompress(t))
