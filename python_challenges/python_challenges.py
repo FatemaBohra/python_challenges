@@ -1028,3 +1028,14 @@ print(random_num)
 
 random_num = random.uniform(5, 95)
 print(random_num)
+
+# 70 Please write a program to output a random even number between 0 and 10 inclusive using random module and list comprehension.
+# Hint : Use random.choice() to a random element from a list.
+
+
+def random_even_val():
+    random_val = [i for i in range(0, 11, 2)]
+    return(random.choice(random_val))
+
+
+print(random_even_val())
