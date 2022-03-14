@@ -1096,6 +1096,7 @@ print(randomly_print_integer())
 # 76 Please write a program to compress and decompress the string "hello world!hello world!hello world!hello world!".
 # Hint: Use zlib.compress() and zlib.decompress() to compress and decompress a string.
 
+# In Python 3 zlib.compress() accepts only DataType <bytes>
 s = bytes('hello world!hello world!hello world!hello world!', 'utf-8')
 t = zlib.compress(s)
 print(t)
