@@ -1128,3 +1128,28 @@ def shuffle():
 
 
 print(shuffle())
+
+# 79 Please write a program to generate all sentences where subject is in ["I", "You"] and verb is in ["Play", "Love"] and the object is in ["Hockey","Football"].
+
+subjects = ["I", "You"]
+verbs = ["Play", "Love"]
+objects = ["Hockey", "Football"]
+
+for sub in subjects:
+    for verb in verbs:
+        for obj in objects:
+            print("{} {} {}".format(sub, verb, obj))
+
+# 80 Please write a program to print the list after removing even numbers in [5,6,77,45,22,12,24].
+
+
+def removing_even_val():
+    lst = [5, 6, 77, 45, 22, 12, 24]
+    new_lst = []
+    for i in lst:
+        if i % 2 != 0:
+            new_lst.append(str(i))
+    return new_lst
+
+
+print(removing_even_val())
