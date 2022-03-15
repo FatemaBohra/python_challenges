@@ -2,6 +2,7 @@
 # between 2000 and 3200 (both included).
 # The numbers obtained should be printed in a comma-separated sequence on a single line.
 
+import itertools
 import time
 import zlib
 import random
@@ -1358,3 +1359,8 @@ def even_indexes():
 
 
 print(even_indexes())
+
+# 93 Please write a program which prints all permutations of [1,2,3]
+# Hint: Use itertools.permutations() to get permutations of list
+
+print(list(itertools.permutations([1, 2, 3])))
