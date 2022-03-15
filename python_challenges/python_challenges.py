@@ -1240,3 +1240,38 @@ def removing_24():
 
 
 print(removing_24())
+
+# 87 With two given lists [1,3,6,78,35,55] and [12,24,35,24,88,120,155], write a program to make a list whose elements are intersection of the above given lists.
+# hint: Use set() and "&=" to do set intersection operation.
+
+
+def intersection():
+    list1 = [1, 3, 6, 88, 35, 55]
+    list2 = [12, 24, 35, 24, 88, 120, 155]
+    set1 = set(list1)
+    set2 = set(list2)
+    intersection = set.intersection(set1, set2)
+    return(intersection)
+
+
+print(intersection())
+
+# 88 With a given list [12,24,35,24,88,120,155,88,120,155], write a program to print this list after removing all duplicate values with original order reserved.
+# Hint: Use set() to store a number of values without duplicate.
+
+
+def rm_duplicate():
+    li = [12, 24, 35, 24, 88, 120, 155, 88, 120, 155]
+
+    for e in li:
+        if li.count(e) > 1:
+            li.remove(e)
+    return li
+
+
+print(rm_duplicate())
+
+# or
+
+li = sorted(set([12, 24, 35, 24, 88, 120, 155, 88, 120, 155]))
+print(li)
