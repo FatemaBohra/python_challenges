@@ -1218,3 +1218,25 @@ print(removing_2th_4th_num())
 
 array = [[[0 for col in range(8)] for col in range(5)] for row in range(3)]
 print(array)
+
+# 85 By using list comprehension, please write a program to print the list after removing the 0th,4th,5th numbers in [12,24,35,70,88,120,155].
+
+
+def removing_0th_4th_5th():
+    li = [12, 24, 35, 70, 88, 120, 155]
+    li = [li[i] for i in range(len(li)) if i not in (0, 4, 5)]
+    return li
+
+
+print(removing_0th_4th_5th())
+
+# 86 By using list comprehension, please write a program to print the list after removing the value 24 in [12,24,35,24,88,120,155].
+
+
+def removing_24():
+    li = [12, 24, 35, 24, 88, 120, 155]
+    li = [i for i in li if i != 24]
+    return li
+
+
+print(removing_24())
