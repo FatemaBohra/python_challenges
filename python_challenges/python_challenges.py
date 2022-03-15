@@ -1149,7 +1149,43 @@ def removing_even_val():
     for i in lst:
         if i % 2 != 0:
             new_lst.append(str(i))
-    return new_lst
+    return new_lst  # returns a list as elements are string!
 
 
 print(removing_even_val())
+
+# or
+
+
+def removing_even_val():
+    li = [5, 6, 77, 45, 22, 12, 24]
+    li = [x for x in li if x % 2 != 0]
+    return (li)  # returns a list as elements are integer!
+
+
+print(removing_even_val())
+
+# 81 By using list comprehension, please write a program to print the list after removing numbers which are divisible by 5 and 7 in [12,24,35,70,88,120,155].
+
+
+def remove_num_div_by_5_7():
+    lst = [12, 24, 35, 70, 88, 120, 155]
+    new_lst = []
+    for i in lst:
+        if i % 35 != 0:  # 5*7 = 35
+            new_lst.append(str(i))
+    return new_lst  # returns a list as elements are string!
+
+
+print(remove_num_div_by_5_7())
+
+# or
+
+
+def remove_num_div_by_5_7():
+    li = [12, 24, 35, 70, 88, 120, 155]
+    li = [x for x in li if x % 35 != 0]
+    return(li)  # returns a list as elements are integer!
+
+
+print(remove_num_div_by_5_7())
