@@ -1323,3 +1323,38 @@ pprint(count_each_char())
 s = 'abcdefgabc'
 for i in sorted(set(s)):
     print(f'{i}, {s.count(i)}')
+
+# 91 Please write a program which accepts a string from console and print it in reverse order.
+
+
+def reverse_order():
+    words = input("Enter strings: ")
+    reversed_words = ''.join(reversed(words))
+    return reversed_words
+
+
+print(reverse_order())
+
+# or
+
+
+def reversed_words():
+    words = input("Enter strings: ")
+    reverse = words[::-1]
+    return reverse
+
+
+print(reversed_words())
+
+# 92 Please write a program which accepts a string from console and print the characters that have even indexes.
+# Example: If the following string is given as input to the program: H1e2l3l4o5w6o7r8l9d
+# Then, the output of the program should be: Helloworld
+
+
+def even_indexes():
+    words = input("Enter string: ")
+    even_indexes = words[::2]
+    return even_indexes
+
+
+print(even_indexes())
