@@ -1275,3 +1275,51 @@ print(rm_duplicate())
 
 li = sorted(set([12, 24, 35, 24, 88, 120, 155, 88, 120, 155]))
 print(li)
+
+# 89 Define a class Person and its two child classes: Male and Female. All classes have a method "getGender" which can print "Male" for Male class and "Female" for Female class.
+
+
+class Person():
+    def getGender(self):
+        return 'unknown'
+
+
+class Male(Person):
+    def getGender(self):
+        return ' Male'
+
+
+class Female(Person):
+    def getGender(self):
+        return "Female"
+
+
+male = Male()
+female = Female()
+print(male.getGender())
+print(female.getGender())
+
+# 90 Please write a program which count and print the numbers of each character in a string input by console.
+# Example: abcdefgabc
+# output;
+# a,2
+# c,2
+# b,2
+# e,1
+# d,1
+# g,1
+# f,1
+
+
+def count_each_char():
+    words = input("Enter a string: ")
+    return ({i: words.count(i) for i in words})
+
+
+pprint(count_each_char())
+
+# or
+
+s = 'abcdefgabc'
+for i in sorted(set(s)):
+    print(f'{i}, {s.count(i)}')
