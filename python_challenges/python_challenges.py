@@ -1201,3 +1201,20 @@ def removing_0th_2nd_4th_6th_num():
 
 
 print(removing_0th_2nd_4th_6th_num())
+
+# 83 By using list comprehension, please write a program to print the list after removing the 2nd - 4th numbers in [12,24,35,70,88,120,155].
+
+
+def removing_2th_4th_num():
+    li = [12, 24, 35, 70, 88, 120, 155]
+    # i = 0, 1, 2, 3, 4, 5, 6
+    li = [li[i] for i in range(len(li)) if i < 3 or i > 4]
+    return li
+
+
+print(removing_2th_4th_num())
+
+# 84 By using list comprehension, please write a program generate a 3*5*8 3D array whose each element is 0.
+
+array = [[[0 for col in range(8)] for col in range(5)] for row in range(3)]
+print(array)
